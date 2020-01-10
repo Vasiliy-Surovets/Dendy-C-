@@ -82,6 +82,21 @@ int main()
                 silver.out(cv);
                 f = silver.draw();
             }
+
+            if (bot.boomout() == 2)
+            {
+                while (GetAsyncKeyState(VK_RETURN) == 0)
+                {
+                    txSetFillColor(TX_BLACK);
+                    txRectangle(0, 0, 900, 900);
+
+                    txSetColor(TX_WHITE);
+                    txSelectFont ("Comic Sans MS", 40);
+                    txDrawText(0, 0, 900, 900, "Победа!!! Зажми Enter и Escape для выхода");
+                    txSleep(50);
+                }
+            }
+
             if (bot.boomout() == 1)
             {
                 bot.smena();
@@ -94,6 +109,7 @@ int main()
                     txRectangle(0, 0, 900, 900);
 
                     txSetColor(TX_WHITE);
+                    txSelectFont ("Comic Sans MS", 40);
                     txDrawText(0, 0, 900, 900, "Отлично! Нажмите Enter для продолжения");
                     txSleep(50);
                 }
@@ -106,22 +122,12 @@ int main()
                     txRectangle(0, 0, 900, 900);
 
                     txSetColor(TX_WHITE);
+                    txSelectFont ("Comic Sans MS", 40);
                     txDrawText(0, 0, 900, 900, "Проиграл... Зажми Enter и Escape для выхода");
                     txSleep(50);
                 }
             }
-            if (bot.boomout() == 2)
-            {
-                while (GetAsyncKeyState(VK_RETURN) == 0)
-                {
-                    txSetFillColor(TX_BLACK);
-                    txRectangle(0, 0, 900, 900);
 
-                    txSetColor(TX_WHITE);
-                    txDrawText(0, 0, 900, 900, "Победа!!! Зажми Enter и Escape для выхода");
-                    txSleep(50);
-                }
-            }
 
             v = bot.coord();
             txSleep(50);

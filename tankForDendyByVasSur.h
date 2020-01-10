@@ -299,10 +299,10 @@ void Tank::captertwo()
     }
 void Tank::capterthree()
     {
-        x = 1;
-        xtim = 1;
-        y = 6;
-        ytim = 6;
+        x = 16;
+        xtim = 16;
+        y = 1;
+        ytim = 1;
     }
 void Tank::capterfour()
     {

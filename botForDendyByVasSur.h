@@ -31,7 +31,7 @@ class Bot
         int x, y, wh;
         int xSrc, ySrc, whSrc, time = 1, stoy = 0, urov;
         int shot, xtim, ytim, provx, provy, boomx = -1, boomy = -1;
-        int V, bank = 0, poloz, snar = 10;
+        int V, bank = 0, poloz, snar = 3;
         HDC text;
 };
 
@@ -238,16 +238,16 @@ int Bot::boomout()
 
 int Bot::botshot()
     {
-        if (snar == 16)
+        if (snar == 3)
         {
             snar--;
             return 1;
         }
         else if (snar == 0)
         {
-            snar = 16;
+            snar = 3;
         }
-        else if (snar < 16)
+        else if (snar < 3)
         {
             snar--;
         }
@@ -304,10 +304,10 @@ void Bot::captertwo()
 void Bot::capterthree()
     {
         stoy = 0;
-        x = 16;
-        y = 11;
-        xtim = 16;
-        ytim = 11;
+        x = 1;
+        y = 16;
+        xtim = 1;
+        ytim = 16;
     }
 void Bot::capterfour()
     {
