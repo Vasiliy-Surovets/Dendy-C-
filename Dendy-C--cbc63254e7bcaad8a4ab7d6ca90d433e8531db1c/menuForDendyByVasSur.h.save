@@ -1,0 +1,20 @@
+class Menu
+{
+    public:
+    void sprite(HDC a);
+
+    private:
+    HDC text;
+
+};
+
+void Menu::sprite(HDC a)
+    {
+        text = a;
+    }
+
+int Menu::startscreen()
+    {
+        while (GetAsyncKeyState(VK_RETURN) == 0)
+        Win32::TransparentBlt (txDC(), , j * k, k, k, text, 153, 3, whSrc, whSrc, TX_BLACK);
+    }
